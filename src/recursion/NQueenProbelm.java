@@ -1,8 +1,5 @@
 package recursion;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 /**
  * 
  * 51. N-Queens https://leetcode.com/problems/n-queens/ 

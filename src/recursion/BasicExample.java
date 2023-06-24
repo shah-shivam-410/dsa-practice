@@ -5,8 +5,9 @@ public class BasicExample {
 	public static void main(String[] args) {
 //		prin/tHello(10);
 //		System.out.println(countOfWays(3, 3));
-		String str = "abba";
-		System.out.println(isPalin(str, 0, str.length()-1));
+//		String str = "abba";
+//		System.out.println(isPalin(str, 0, str.length()-1));
+		printHello(5);
 	}
 	
 	public static void printHello(int n) {
