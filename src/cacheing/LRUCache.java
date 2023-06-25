@@ -7,12 +7,15 @@ import java.util.Map;
  * 
  * @author SHIVAM SHAH
  * 
- * LRU - Least Recently User cache
- * get(K) - Get operation will return value associated with key and will make same key most recently used.
- * put(K,V) - Put operation will insert new element, if capacity is reached, 
- * 			  it will remove least recently used element, and will insert new element as most recently used.
- * Main data Structures: HashMap<Integer, Node>
- * 				         Node - represent doubly linked list with patameter: Key, Value, Previous and Next.
+ * LRU - Least Recently User cache 
+ * get(K) - Get operation will return
+ * value associated with key and will make same key most recently used.
+ * put(K,V) - Put operation will insert new element, if capacity is
+ * reached, it will remove least recently used element, and will insert
+ * new element as most recently used. Main data Structures:
+ * HashMap<Integer, Node> Node - represent doubly linked list with
+ * parameter: Key, Value, Previous and Next.
+ * 
  */
 
 public class LRUCache {
@@ -22,6 +25,7 @@ public class LRUCache {
 		Integer value;
 		Node next;
 		Node prev;
+
 		Node(Integer key, Integer value) {
 			this.key = key;
 			this.value = value;
@@ -32,7 +36,7 @@ public class LRUCache {
 	Map<Integer, Node> map = new HashMap<>();
 	private Node head = new Node(0, 0);
 	private Node tail = new Node(0, 0);
-	
+
 	public LRUCache(Integer capacity) {
 		this.capacity = capacity;
 		head.next = tail;
@@ -72,11 +76,11 @@ public class LRUCache {
 		node.prev.next = node.next;
 		node.next.prev = node.prev;
 	}
-	
+
 	void print() {
 		Node a = head;
 		System.out.print("Head->");
-		while(a.next != null) {
+		while (a.next != null) {
 			System.out.print(a.key + "->");
 			a = a.next;
 		}
